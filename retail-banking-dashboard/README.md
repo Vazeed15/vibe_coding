@@ -70,7 +70,19 @@ A full-stack banking dashboard application with AI-powered loan approval predict
 
 ## 🚀 Quick Start
 
-### Prerequisites
+### 🌐 GitHub Pages Demo (Fastest)
+
+Want to see the app in action? Deploy to GitHub Pages in minutes:
+
+1. **Fork this repository** to your GitHub account
+2. **Enable GitHub Pages:**
+   - Go to Settings → Pages
+   - Select "GitHub Actions" as source
+3. **Push to main branch** or manually trigger the "Deploy to GitHub Pages" workflow
+4. **Access your demo** at `https://your-username.github.io/retail-banking-dashboard`
+5. **Login** with: `john.doe@email.com` / `demo123`
+
+### Prerequisites (Local Development)
 - Docker and Docker Compose
 - Node.js 18+ (for local development)
 - Python 3.11+ (for local development)
@@ -199,6 +211,44 @@ retail-banking-dashboard/
 
 ## 🚀 Deployment
 
+### 📄 GitHub Pages Deployment (Frontend Only - Demo Mode)
+
+Deploy the frontend as a static demo site to GitHub Pages:
+
+#### Prerequisites
+1. Fork or clone this repository to your GitHub account
+2. Enable GitHub Pages in repository settings
+
+#### Automatic Deployment
+The repository includes a GitHub Actions workflow (`.github/workflows/github-pages.yml`) that automatically:
+- Builds the React frontend in demo mode with mock data
+- Deploys to GitHub Pages on every push to `main` branch
+
+#### Manual Setup Steps
+1. **Enable GitHub Pages:**
+   - Go to your repository Settings → Pages
+   - Select "GitHub Actions" as the source
+   - Save the settings
+
+2. **Trigger Deployment:**
+   - Push any changes to the `main` branch, or
+   - Go to Actions tab and manually run the "Deploy to GitHub Pages" workflow
+
+3. **Access Your Demo:**
+   - Your site will be available at: `https://your-username.github.io/your-repo-name`
+   - Use these demo credentials:
+     - **Email:** `john.doe@email.com`
+     - **Password:** `demo123`
+
+#### Demo Mode Features
+When deployed to GitHub Pages, the app runs in demo mode with:
+- ✅ Mock customer data and transactions
+- ✅ Simulated AI loan prediction with realistic logic
+- ✅ Interactive spending analytics and charts
+- ✅ Full authentication flow (simulated)
+- ✅ Responsive design and all UI features
+- ⚠️ No real backend - all data is client-side only
+
 ### Environment Variables
 
 #### Backend
@@ -210,9 +260,17 @@ DATABASE_URL=sqlite:///./banking.db
 #### Frontend
 ```env
 REACT_APP_API_URL=http://localhost:8000
+REACT_APP_DEMO_MODE=false
 ```
 
-### Production Deployment
+#### For GitHub Pages Demo
+```env
+REACT_APP_API_URL=""
+REACT_APP_DEMO_MODE=true
+PUBLIC_URL=/your-repo-name
+```
+
+### Production Deployment (Full Stack)
 
 #### Railway
 1. Connect your GitHub repository
@@ -234,6 +292,15 @@ docker build -f Dockerfile.frontend -t banking-frontend .
 docker run -d -p 8000:8000 banking-backend
 docker run -d -p 3000:80 banking-frontend
 ```
+
+### Deployment Options Comparison
+
+| Option | Type | Backend | Database | Best For |
+|--------|------|---------|----------|----------|
+| **GitHub Pages** | Static | ❌ Mock Data | ❌ Client-side | Demo, Portfolio, Showcase |
+| **Railway** | Full Stack | ✅ FastAPI | ✅ PostgreSQL | Production, Development |
+| **Render** | Full Stack | ✅ FastAPI | ✅ PostgreSQL | Production, Staging |
+| **Docker** | Full Stack | ✅ FastAPI | ✅ SQLite/PostgreSQL | Self-hosted, Enterprise |
 
 ## 🔧 Configuration
 
