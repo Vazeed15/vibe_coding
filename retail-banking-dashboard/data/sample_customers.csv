@@ -1,0 +1,11 @@
+id,name,email,phone,account_type,balance,credit_score,income,employment_type
+1,John Doe,john.doe@email.com,+1-555-0101,savings,15750.50,720,65000,employed
+2,Jane Smith,jane.smith@email.com,+1-555-0102,checking,8200.75,680,52000,employed
+3,Mike Johnson,mike.johnson@email.com,+1-555-0103,business,25000.00,750,85000,self-employed
+4,Sarah Wilson,sarah.wilson@email.com,+1-555-0104,savings,3500.25,620,38000,employed
+5,David Brown,david.brown@email.com,+1-555-0105,checking,12800.90,700,72000,employed
+6,Lisa Garcia,lisa.garcia@email.com,+1-555-0106,savings,6750.30,590,28000,unemployed
+7,Robert Taylor,robert.taylor@email.com,+1-555-0107,business,45000.00,780,120000,self-employed
+8,Jennifer Davis,jennifer.davis@email.com,+1-555-0108,checking,9500.60,660,48000,employed
+9,Christopher Martinez,chris.martinez@email.com,+1-555-0109,savings,18900.40,710,78000,employed
+10,Amanda Thompson,amanda.thompson@email.com,+1-555-0110,checking,4200.15,640,42000,employed
