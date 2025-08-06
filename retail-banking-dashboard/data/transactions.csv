@@ -1,0 +1,51 @@
+id,customer_id,amount,transaction_type,category,description,date
+1,1,3000.00,credit,salary,Monthly Salary,2024-01-15 09:00:00
+2,1,85.50,debit,food,Grocery Store,2024-01-16 14:30:00
+3,1,1200.00,debit,bills,Rent Payment,2024-01-01 10:00:00
+4,1,45.75,debit,food,Coffee Shop,2024-01-17 08:15:00
+5,1,250.00,debit,shopping,Online Purchase,2024-01-18 16:45:00
+6,2,2800.00,credit,salary,Monthly Salary,2024-01-15 09:00:00
+7,2,120.30,debit,food,Restaurant,2024-01-16 19:20:00
+8,2,900.00,debit,bills,Utilities,2024-01-02 11:30:00
+9,2,75.00,debit,shopping,Clothing Store,2024-01-19 15:00:00
+10,2,450.00,debit,emi,Car Loan,2024-01-05 12:00:00
+11,3,5000.00,credit,transfer,Business Income,2024-01-15 10:30:00
+12,3,150.00,debit,food,Business Lunch,2024-01-16 13:00:00
+13,3,2000.00,debit,bills,Office Rent,2024-01-01 09:00:00
+14,3,300.00,debit,shopping,Office Supplies,2024-01-17 11:45:00
+15,3,800.00,debit,other,Equipment Purchase,2024-01-18 14:20:00
+16,4,2200.00,credit,salary,Monthly Salary,2024-01-15 09:00:00
+17,4,95.40,debit,food,Grocery Store,2024-01-16 17:30:00
+18,4,750.00,debit,bills,Rent Payment,2024-01-01 10:15:00
+19,4,35.00,debit,food,Fast Food,2024-01-19 12:30:00
+20,4,180.00,debit,shopping,Department Store,2024-01-20 16:00:00
+21,5,4200.00,credit,salary,Monthly Salary,2024-01-15 09:00:00
+22,5,110.80,debit,food,Grocery Store,2024-01-16 15:45:00
+23,5,1100.00,debit,bills,Mortgage Payment,2024-01-01 08:30:00
+24,5,65.50,debit,food,Restaurant,2024-01-17 20:15:00
+25,5,320.00,debit,shopping,Electronics Store,2024-01-18 13:30:00
+26,6,500.00,credit,other,Unemployment Benefit,2024-01-15 10:00:00
+27,6,70.25,debit,food,Grocery Store,2024-01-16 14:00:00
+28,6,600.00,debit,bills,Rent Payment,2024-01-01 09:30:00
+29,6,25.00,debit,food,Coffee Shop,2024-01-19 09:45:00
+30,6,80.00,debit,shopping,Pharmacy,2024-01-20 11:20:00
+31,7,8000.00,credit,transfer,Business Revenue,2024-01-15 11:00:00
+32,7,200.00,debit,food,Business Dinner,2024-01-16 19:30:00
+33,7,3500.00,debit,bills,Commercial Rent,2024-01-01 08:00:00
+34,7,500.00,debit,shopping,Business Equipment,2024-01-17 14:45:00
+35,7,1200.00,debit,other,Professional Services,2024-01-18 10:30:00
+36,8,3200.00,credit,salary,Monthly Salary,2024-01-15 09:00:00
+37,8,88.90,debit,food,Grocery Store,2024-01-16 16:20:00
+38,8,950.00,debit,bills,Rent Payment,2024-01-01 10:45:00
+39,8,42.00,debit,food,Lunch,2024-01-17 12:15:00
+40,8,275.00,debit,shopping,Home Improvement,2024-01-19 15:30:00
+41,9,4800.00,credit,salary,Monthly Salary,2024-01-15 09:00:00
+42,9,125.60,debit,food,Grocery Store,2024-01-16 18:00:00
+43,9,1300.00,debit,bills,Mortgage Payment,2024-01-01 09:15:00
+44,9,55.75,debit,food,Coffee and Pastry,2024-01-17 07:30:00
+45,9,400.00,debit,shopping,Furniture Store,2024-01-18 12:45:00
+46,10,2900.00,credit,salary,Monthly Salary,2024-01-15 09:00:00
+47,10,92.30,debit,food,Grocery Store,2024-01-16 17:15:00
+48,10,800.00,debit,bills,Rent Payment,2024-01-01 11:00:00
+49,10,38.50,debit,food,Takeout,2024-01-19 18:30:00
+50,10,150.00,debit,shopping,Clothing,2024-01-20 14:20:00
