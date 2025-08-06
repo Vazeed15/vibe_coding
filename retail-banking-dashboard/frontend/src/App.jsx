@@ -103,8 +103,18 @@ const AppRouter = () => {
 };
 
 function App() {
+  const isDemoMode = process.env.REACT_APP_DEMO_MODE === 'true';
+
   return (
     <AuthProvider>
+      {isDemoMode && (
+        <div className="bg-yellow-100 border-b border-yellow-300 px-4 py-2 text-center">
+          <p className="text-yellow-800 text-sm">
+            🚀 <strong>Demo Mode:</strong> This is a demonstration version running with mock data. 
+            Use <strong>john.doe@email.com / demo123</strong> to login.
+          </p>
+        </div>
+      )}
       <AppRouter />
     </AuthProvider>
   );
