@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { mockAPI, shouldUseMockData } from './mockApi';
 
 const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
@@ -11,22 +12,31 @@ const api = axios.create({
 
 // Customer API calls
 export const customerAPI = {
-  getAll: () => api.get('/customers/'),
-  getById: (id) => api.get(`/customers/${id}`),
+  getAll: () => shouldUseMockData() ? mockAPI.getCustomers() : api.get('/customers/'),
+  getById: (id) => shouldUseMockData() ? mockAPI.getCustomer(id) : api.get(`/customers/${id}`),
 };
 
 // Transaction API calls
 export const transactionAPI = {
-  getByCustomerId: (customerId, params = {}) => 
+  getByCustomerId: (customerId, params = {}) => shouldUseMockData() ? 
+    mockAPI.getTransactions(customerId, params) : 
     api.get(`/transactions/${customerId}`, { params }),
-  add: (transaction) => api.post('/transactions/add', transaction),
-  getAnalytics: (customerId) => api.get(`/transactions/${customerId}/analytics`),
+  add: (transaction) => shouldUseMockData() ? 
+    mockAPI.addTransaction(transaction) : 
+    api.post('/transactions/add', transaction),
+  getAnalytics: (customerId) => shouldUseMockData() ? 
+    mockAPI.getAnalytics(customerId) : 
+    api.get(`/transactions/${customerId}/analytics`),
 };
 
 // Loan API calls
 export const loanAPI = {
-  predict: (loanRequest) => api.post('/loan/predict', loanRequest),
-  getModelInfo: () => api.get('/loan/model-info'),
+  predict: (loanRequest) => shouldUseMockData() ? 
+    mockAPI.predictLoan(loanRequest) : 
+    api.post('/loan/predict', loanRequest),
+  getModelInfo: () => shouldUseMockData() ? 
+    mockAPI.getModelInfo() : 
+    api.get('/loan/model-info'),
 };
 
 // Auth simulation
