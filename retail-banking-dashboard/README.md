@@ -70,58 +70,77 @@ A full-stack banking dashboard application with AI-powered loan approval predict
 
 ## 🚀 Quick Start
 
-### 🌐 GitHub Pages Demo (Fastest)
+### ⚡ One-Command Setup (Easiest)
 
-Want to see the app in action? Deploy to GitHub Pages in minutes:
+```bash
+git clone <repository-url>
+cd retail-banking-dashboard
+./start.sh
+```
 
-1. **Fork this repository** to your GitHub account
-2. **Enable GitHub Pages:**
-   - Go to Settings → Pages
-   - Select "GitHub Actions" as source
-3. **Push to main branch** or manually trigger the "Deploy to GitHub Pages" workflow
-4. **Access your demo** at `https://your-username.github.io/retail-banking-dashboard`
-5. **Login** with: `john.doe@email.com` / `demo123`
-
-### Prerequisites (Local Development)
-- Docker and Docker Compose
-- Node.js 18+ (for local development)
-- Python 3.11+ (for local development)
+The interactive script will guide you through setup options:
+- **Option 1**: Docker Compose (recommended) - No dependencies needed
+- **Option 2**: Local development - Requires Node.js 18+ and Python 3.11+
 
 ### 🐳 Docker Deployment (Recommended)
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd retail-banking-dashboard
-   ```
+```bash
+# Clone and start with Docker (no dependencies needed)
+git clone <repository-url>
+cd retail-banking-dashboard
+docker-compose up --build
+```
 
-2. **Start the application**
-   ```bash
-   docker-compose up --build
-   ```
+**Access URLs:**
+- 🌐 **Frontend**: http://localhost:3000
+- 🔧 **Backend API**: http://localhost:8000  
+- 📚 **API Docs**: http://localhost:8000/docs
 
-3. **Access the application**
-   - Frontend: http://localhost:3000
-   - Backend API: http://localhost:8000
-   - API Documentation: http://localhost:8000/docs
+**Demo Credentials:**
+- Email: `john.doe@email.com`
+- Password: `demo123`
 
 ### 🖥️ Local Development
 
-#### Backend Setup
+#### Prerequisites
+- Node.js 18+
+- Python 3.11+
+
+#### Quick Setup
 ```bash
+# Backend
 cd backend
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
-cd db && python seed_data.py  # Load sample data
-cd .. && uvicorn main:app --reload
-```
+cd db && python seed_data.py && cd ..
+uvicorn main:app --reload &
 
-#### Frontend Setup
-```bash
+# Frontend (in new terminal)
 cd frontend
 npm install
 npm start
+```
+
+### 🌐 GitHub Pages Demo (Static Demo)
+
+Deploy a static demo version to GitHub Pages:
+
+1. **Fork this repository**
+2. **Enable GitHub Pages** (Settings → Pages → GitHub Actions)
+3. **Push to main** or manually trigger the workflow
+4. **Access at**: `https://your-username.github.io/retail-banking-dashboard`
+
+### 📋 Startup Script Commands
+
+```bash
+./start.sh docker    # Start with Docker
+./start.sh local     # Start local development
+./start.sh status    # Check service status
+./start.sh stop      # Stop all services
+./start.sh logs      # View service logs
+./start.sh clean     # Clean up Docker resources
+./start.sh help      # Show all options
 ```
 
 ## 🔑 Demo Accounts
