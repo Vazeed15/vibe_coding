@@ -1,9 +1,13 @@
 import pandas as pd
 from sqlalchemy.orm import Session
 from database import SessionLocal, engine
+import sys
+import os
+
+# Add parent directory to path to import models
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from models import Customer, Transaction, AccountType, TransactionType, TransactionCategory
 from datetime import datetime
-import os
 
 def load_sample_data():
     """Load sample data from CSV files into the database"""
