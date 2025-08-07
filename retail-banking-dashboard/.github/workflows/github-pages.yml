@@ -47,6 +47,12 @@ jobs:
         export REACT_APP_API_URL=""
         export REACT_APP_DEMO_MODE="true"
         npm run build
+        
+        # Create a CNAME file if needed (remove if not using custom domain)
+        # echo "yourdomain.com" > build/CNAME
+        
+        # Create .nojekyll file to bypass Jekyll processing
+        touch build/.nojekyll
     
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
